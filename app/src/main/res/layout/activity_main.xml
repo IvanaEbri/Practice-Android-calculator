@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="@id/tableRow1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/text_area"
+        >
+        <EditText
+            android:id="@+id/ingresoDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="end"
+            android:hint="@string/zero"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/tableRow2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_view"
+        app:layout_constraintTop_toBottomOf="@id/ac_btn">
+
+        <Button
+            android:id="@+id/boton1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/one"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+        <Button
+            android:id="@+id/boton2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/two"
+            app:layout_constraintStart_toEndOf="@id/boton1"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos"/>
+
+        <Button
+            android:id="@+id/boton3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/three"
+            app:layout_constraintStart_toEndOf="@id/boton2"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+        <Button
+            android:id="@+id/sumar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn_operador"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="clickEnBotonOperador"
+            android:text="@string/sum"
+            app:layout_constraintStart_toEndOf="@id/boton3"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/tableRow3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_view"
+        app:layout_constraintTop_toBottomOf="@id/tableRow1">
+
+        <Button
+            android:id="@+id/boton4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/four"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+        <Button
+            android:id="@+id/boton5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/five"
+            app:layout_constraintStart_toEndOf="@id/boton4"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+        <Button
+            android:id="@+id/boton6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/six"
+            app:layout_constraintStart_toEndOf="@id/boton5"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+        <Button
+            android:id="@+id/restar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/btn_operador"
+            android:textColor="@color/white"
+            android:onClick="clickEnBotonOperador"
+            android:text="@string/res"
+            app:layout_constraintStart_toEndOf="@id/boton6"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/tableRow4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_view"
+        app:layout_constraintTop_toBottomOf="@id/tableRow2">
+
+        <Button
+            android:id="@+id/boton7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/seven"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+        <Button
+            android:id="@+id/boton8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/eight"
+            app:layout_constraintStart_toEndOf="@id/boton7"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos"/>
+
+        <Button
+            android:id="@+id/boton9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/nine"
+            app:layout_constraintStart_toEndOf="@id/boton8"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+        <Button
+            android:id="@+id/multiply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn_operador"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:onClick="clickEnBotonOperador"
+            android:text="@string/mul"
+            app:layout_constraintStart_toEndOf="@id/boton9"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_view"
+        app:layout_constraintTop_toBottomOf="@id/tableRow3">
+
+        <Button
+            android:id="@+id/boton0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:layout_weight="2"
+            android:onClick="clickEnBotonOperando"
+            android:text="@string/zero"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+        <Button
+            android:id="@+id/boton_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn"
+            android:textColor="@color/white"
+            android:layout_weight=".9"
+            android:onClick="clickEnBotonComa"
+            android:text="@string/point"
+            app:layout_constraintStart_toEndOf="@id/boton0"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos"/>
+
+
+        <Button
+            android:id="@+id/divide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/btn_operador"
+            android:textColor="@color/white"
+            android:layout_weight=".9"
+            android:onClick="clickEnBotonOperador"
+            android:text="@string/div"
+            app:layout_constraintStart_toEndOf="@id/boton_point"
+            app:layout_constraintTop_toBottomOf="@id/ingresoDatos" />
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/equal_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/btn_operador"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:onClick="clickEnBotonIgual"
+        android:text="@string/equal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tableRow4" />
+
+    <Button
+        android:id="@+id/ac_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/btn_operador"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:onClick="clickEnBotonBorrar"
+        android:text="@string/ac"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/del_btn"
+        app:layout_constraintTop_toTopOf="@id/del_btn" />
+
+    <Button
+        android:id="@+id/del_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/btn_operador"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:onClick="clickEnBotonDel"
+        android:text="@string/del"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toStartOf="@id/ac_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
